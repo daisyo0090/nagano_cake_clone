@@ -10,10 +10,13 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all
+    @items = Item.all.page(params[:page]).per(10)
+    @genres = Genre.all
   end
 
   def show
+    @item = Item.find(params[:id])
+    @itemgenre = Item.genre
   end
 
   def edit

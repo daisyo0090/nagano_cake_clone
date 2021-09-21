@@ -1,0 +1,23 @@
+<main class="customer_main_index">
+  <div class="customer_main_index_h3">
+    <h3>会員一覧</h3>
+  </div>
+  <div class="customer_main_index_table">
+    <table>
+      <tr>
+        <th>会員ID</th>
+        <th>氏名</th>
+        <th>メールアドレス</th>
+        <th>ステータス</th>
+      </tr>
+      <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.last_name,customer.first_name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.is_active %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</main>
