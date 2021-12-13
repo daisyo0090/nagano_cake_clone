@@ -3397,3 +3397,395 @@ Processing by Admin::GenresController#index as HTML
 Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/admin/genres" for 126.241.211.202 at 2021-12-13 12:39:58 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:29
+  Rendered admin/genres/index.html.erb within layouts/application (10.7ms)
+  Rendered homes/_header.html.erb (0.4ms)
+Completed 200 OK in 4324ms (Views: 4311.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/items" for 126.241.211.202 at 2021-12-13 12:41:36 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:14
+  Rendered admin/items/index.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<ActiveRecord::Relation []>):
+    20:       </tr>
+    21:     </table>
+    22:   </div>
+    23:   <%= paginate @items %>
+    24: </main>
+  
+app/views/admin/items/index.html.erb:23:in `_app_views_admin_items_index_html_erb__3864444781309119239_49146320'
+Started GET "/admin/items" for 126.241.211.202 at 2021-12-13 12:42:43 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:14
+  Rendered admin/items/index.html.erb within layouts/application (3.0ms)
+  Rendered homes/_header.html.erb (0.3ms)
+Completed 200 OK in 446ms (Views: 444.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:43:41 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for nil:NilClass):
+     8:         <th>商品画像</th>
+     9:         <td>
+    10:           <%= form_with model: @item, local: true do |f| %>
+    11:           <%= f.attachment_field :image %>
+    12:         </td>
+    13:       </tr>
+    14:       <tr>
+  
+app/views/admin/items/new.html.erb:11:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885561680580'
+app/views/admin/items/new.html.erb:10:in `_app_views_admin_items_new_html_erb___682402360453726946_69885561680580'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:49:35 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for nil:NilClass):
+     8:         <th>商品画像</th>
+     9:         <td>
+    10:           <%= form_with model: @item, local: true do |f| %>
+    11:           <%= f.attachment_field :image_id %>
+    12:         </td>
+    13:       </tr>
+    14:       <tr>
+  
+app/views/admin/items/new.html.erb:11:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885343743380'
+app/views/admin/items/new.html.erb:10:in `_app_views_admin_items_new_html_erb___682402360453726946_69885343743380'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:52:06 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for nil:NilClass):
+     9:         <th>商品画像</th>
+    10:         <td>
+    11: 
+    12:           <%= f.attachment_field :image_id %>
+    13:         </td>
+    14:       </tr>
+    15:       <tr>
+  
+app/views/admin/items/new.html.erb:12:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885340276000'
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885340276000'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:53:45 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (144.7ms)
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `items_path' for #<#<Class:0x00007f1ee5793aa0>:0x00007f1ee5791638>
+Did you mean?  image_path):
+    3:     <h3>商品新規登録</h3>
+    4:   </div>
+    5:   <div class="item_main_new_table">
+    6:     <%= form_with model: @item, local: true do |f| %>
+    7:     <table>
+    8:       <tr>
+    9:         <th>商品画像</th>
+  
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885337321860'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:55:08 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for #<Item:0x00007f1ee564db50>
+Did you mean?  image_attachment_definition):
+     9:         <th>商品画像</th>
+    10:         <td>
+    11: 
+    12:           <%= f.attachment_field :image_id %>
+    13:         </td>
+    14:       </tr>
+    15:       <tr>
+  
+app/views/admin/items/new.html.erb:12:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885338209900'
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885338209900'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:56:48 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for #<Item:0x00007f1ee63ebf50>
+Did you mean?  image_attachment_definition):
+     9:         <th>商品画像</th>
+    10:         <td>
+    11: 
+    12:           <%= f.attachment_field :image_id %>
+    13:         </td>
+    14:       </tr>
+    15:       <tr>
+  
+app/views/admin/items/new.html.erb:12:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885344306680'
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885344306680'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:57:25 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:6: syntax error, unexpected ',', expecting =>
+...el: @item, new_admin_item_path, local: true do |f| @output_b...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:54: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/admin/items/new.html.erb:6: syntax error, unexpected ',', expecting =>
+app/views/admin/items/new.html.erb:54: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 12:58:05 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for #<Item:0x00007f1ee5247358>
+Did you mean?  image_attachment_definition):
+     8:       <tr>
+     9:         <th>商品画像</th>
+    10:         <td>
+    11:           <%= f.attachment_field :image_id %>
+    12:         </td>
+    13:       </tr>
+    14:       <tr>
+  
+app/views/admin/items/new.html.erb:11:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885335052680'
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885335052680'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:06:05 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for #<Item:0x00007f1ee471d658>
+Did you mean?  image_attachment_definition):
+     8:       <tr>
+     9:         <th>商品画像</th>
+    10:         <td>
+    11:           <%= f.attachment_field :image_id %>
+    12:         </td>
+    13:       </tr>
+    14:       <tr>
+  
+app/views/admin/items/new.html.erb:11:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885334490360'
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885334490360'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:07:23 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for #<Item:0x00007f1f0004ae18>
+Did you mean?  image_attachment_definition):
+     8:       <tr>
+     9:         <th>商品画像</th>
+    10:         <td>
+    11:           <%= f.attachment_field :image_id %>
+    12:         </td>
+    13:       </tr>
+    14:       <tr>
+  
+app/views/admin/items/new.html.erb:11:in `block in _app_views_admin_items_new_html_erb___682402360453726946_69885560507500'
+app/views/admin/items/new.html.erb:6:in `_app_views_admin_items_new_html_erb___682402360453726946_69885560507500'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:07:35 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (95.6ms)
+  Rendered homes/_header.html.erb (0.3ms)
+Completed 200 OK in 200ms (Views: 199.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:15:40 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:29: syntax error, unexpected ','
+..., @genres, :id, :genre_name) {,:prompt => "選択してく...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+... => "選択してください"} );@output_buffer.safe_append...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:50: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:53: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:55: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/items/new.html.erb:29: syntax error, unexpected ','
+app/views/admin/items/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+app/views/admin/items/new.html.erb:50: syntax error, unexpected end, expecting ')'
+app/views/admin/items/new.html.erb:53: syntax error, unexpected ensure, expecting ')'
+app/views/admin/items/new.html.erb:55: syntax error, unexpected end, expecting ')'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:16:37 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:29: syntax error, unexpected '{', expecting ')'
+...me, @genres, :id, :genre_name {,:prompt => "選択してく...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+... => "選択してください"}));@output_buffer.safe_append...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:50: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:53: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:55: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/items/new.html.erb:29: syntax error, unexpected '{', expecting ')'
+app/views/admin/items/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+app/views/admin/items/new.html.erb:50: syntax error, unexpected end, expecting ')'
+app/views/admin/items/new.html.erb:53: syntax error, unexpected ensure, expecting ')'
+app/views/admin/items/new.html.erb:55: syntax error, unexpected end, expecting ')'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:16:57 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  Rendered admin/items/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:29: syntax error, unexpected '{', expecting ')'
+...me, @genres, :id, :genre_name {:prompt => "選択してく...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+... => "選択してください"}));@output_buffer.safe_append...
+...                              ^
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:50: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:53: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_cake/app/views/admin/items/new.html.erb:55: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/items/new.html.erb:29: syntax error, unexpected '{', expecting ')'
+app/views/admin/items/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+app/views/admin/items/new.html.erb:50: syntax error, unexpected end, expecting ')'
+app/views/admin/items/new.html.erb:53: syntax error, unexpected ensure, expecting ')'
+app/views/admin/items/new.html.erb:55: syntax error, unexpected end, expecting ')'
+Started GET "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:17:11 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:29
+  Rendered admin/items/new.html.erb within layouts/application (99.8ms)
+  Rendered homes/_header.html.erb (0.3ms)
+Completed 200 OK in 663ms (Views: 661.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/items/new" for 126.241.211.202 at 2021-12-13 13:17:41 +0000
+Cannot render console from 126.241.211.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/items/new"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

@@ -9,7 +9,6 @@
         <th>商品名</th>
         <th>税抜価格</th>
         <th>ジャンル</th>
-        <th>ステータス</th>
       </tr>
       <tr>
         <% @items.each do |item| %>
@@ -17,10 +16,8 @@
         <td><%= link_to 'item.name', item_path(:id) %></td>
         <td><%= item.price %></td>
         <td><%= @genres.name %></td>
-        <td><%= item.is_active %></td>
         <% end %>
       </tr>
     </table>
   </div>
-  <%= paginate @items %>
 </main>

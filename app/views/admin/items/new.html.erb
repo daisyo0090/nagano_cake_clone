@@ -3,11 +3,11 @@
     <h3>商品新規登録</h3>
   </div>
   <div class="item_main_new_table">
+    <%= form_with model: @item, url: new_admin_item_path, local: true do |f| %>
     <table>
       <tr>
         <th>商品画像</th>
         <td>
-          <%= form_with model: @item, local: true do |f| %>
           <%= f.attachment_field :image %>
         </td>
       </tr>
@@ -26,7 +26,7 @@
       <tr>
         <th>ジャンル</th>
         <td>
-          <%= f.select :genre_id, ["ケーキ","プリン","キャンディ",],  :prompt => "選択してください" %>
+          <%= f.collection_select(:genre_name, @genres, :id, :genre_name)%>
         </td>
       </tr>
       <tr>
