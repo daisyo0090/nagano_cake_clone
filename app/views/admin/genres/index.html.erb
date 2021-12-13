@@ -8,7 +8,7 @@
         <tr>
           <th>ジャンル名</th>
           <td>
-            <%= form_with model:@genre, url: '/genres', local:true do |f| %>
+            <%= form_with model:@genre, url: '/admin/genres', local:true do |f| %>
             <%= f.text_field :genre_name %>
           </td>
           <td>
@@ -29,7 +29,7 @@
         <% @genres.each do |genres| %>
         <tr>
           <td><%= genres.genre_name %></td>
-          <td><%= link_to '編集する', edit_genre_path(genres.id), class: 'btn btn-success' %></td>
+          <td><%= link_to '編集する', edit_admin_genre_path(genres.id), class: 'btn btn-success' %></td>
         </tr>
         <% end %>
       </table>
