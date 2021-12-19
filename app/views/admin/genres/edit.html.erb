@@ -1,14 +1,52 @@
-<main class="genre_edit_main">
-  <div class="genre_edit_main_h3"><h3>ジャンル編集</h3></div>
-  <div class="genre_edit_table">
-    <%= form_with model:@genre, url: admin_genre_path, local:true do |f| %>
+<main class="customer_main_show">
+  <div class="customer_main_show_h3">
+    <h3><%= @customer.last_name, @customer.first_name %>さんの会員情報編集</h3>
+  </div>
+  <div class="customer_main_show_table">
     <table>
       <tr>
-        <th>ジャンル</th>
-        <td><%= f.text_field :genre_name %></td>
-        <td><%= f.submit '変更を保存'%></td>
+        <th>会員ID</th>
+        <td><%= @customer.id %></td>
+      </tr>
+      <tr>
+        <th>氏名</th>
+        <%= form_with model: @customer, local: true do |f| %>
+        <td><%= f.text_field :last_name %></td>
+        <td><%= f.text_field :first_name %></td>
+      </tr>
+      <tr>
+        <th>フリガナ</th>
+        <td><%= f.text_field :last_name_kana %></td>
+        <td><%= f.text_field :first_name_kana %></td>
+      </tr>
+      <tr>
+        <th>郵便番号</th>
+        <td><%= f.text_field :postal_code %></td>
+      </tr>
+      <tr>
+        <th>住所</th>
+        <td><%= f.text_field :address %></td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td><%= f.text_field :telephone_number %></td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= f.text_field :email %></td>
+      </tr>
+      <tr>
+        <th>会員ステータス</th>
+        <td>
+          <%= f.radio_button :is_active, :true %>
+          <%= f.label :is_active, "有効", {value: :true, style: "display: inline-block;"} %>
+          <%= f.radio_button :is_active, :false %>
+          <%= f.label :is_active, "退会", {value: :false, style: "display: inline-block;"} %>
+        </td>
       </tr>
     </table>
-    <% end %>
+    <div class="customer_main_show_btn">
+      <%= link_to '変更を保存', customers_rath %>
+    </div>
   </div>
 </main>

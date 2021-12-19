@@ -1,38 +1,23 @@
-<main class="genres_main">
-  <div class="genres_main_h2">
-    <h3>ジャンル一覧・追加</h3>
+<main class="customer_main_index">
+  <div class="customer_main_index_h3">
+    <h3>会員一覧</h3>
   </div>
-  <div class="genres_main_new">
-    <div class="genres_main_new_table"></div>
-      <table>
-        <tr>
-          <th>ジャンル名</th>
-          <td>
-            <%= form_with model:@genre, url: '/admin/genres', local:true do |f| %>
-            <%= f.text_field :genre_name %>
-          </td>
-          <td>
-            <%= f.submit '新規登録', class: 'btn btn-success' %>
-            <% end %>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="genres_main_index">
-    <div class="genres_main_index_table">
-      <table>
-        <tr>
-          <th>ジャンル</th>
-          <td colspan="1"></td>
-        </tr>
-        <% @genres.each do |genres| %>
-        <tr>
-          <td><%= genres.genre_name %></td>
-          <td><%= link_to '編集する', edit_admin_genre_path(genres.id), class: 'btn btn-success' %></td>
-        </tr>
-        <% end %>
-      </table>
-    </div>
+  <div class="customer_main_index_table">
+    <table>
+      <tr>
+        <th>会員ID</th>
+        <th>氏名</th>
+        <th>メールアドレス</th>
+        <th>ステータス</th>
+      </tr>
+      <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.last_name,customer.first_name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.is_active %></td>
+      </tr>
+      <% end %>
+    </table>
   </div>
 </main>
