@@ -18,7 +18,8 @@ Rails.application.routes.draw do
     passwords:     'public/passwords',
     registrations: 'public/registrations',
   }
-  root to: 'homes#top'
+  get "/about" => "public/homes#about"
+  root to: 'public/homes#top'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

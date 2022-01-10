@@ -1,20 +1,20 @@
 class Admin::CustomersController < ApplicationController
   def index
-    @customers = Costomer.all
+    @customers = Customer.all
   end
 
   def show
-    @customer = Costomer.find(params[:id])
+    @customer = Customer.find(params[:id])
   end
 
   def edit
-    @customer = Costomer.find(params[:id])
+    @customer = Customer.find(params[:id])
   end
 
   def update
-    @customer = Costomer.find(params[:id])
-    @customer.update
-    redirect_to customer_path(:id)
+    @customer = Customer.find(params[:id])
+    @customer.update(customer_params)
+    redirect_to admin_customer_path(:id)
   end
 
 end
