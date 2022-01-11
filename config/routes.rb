@@ -4,7 +4,12 @@ Rails.application.routes.draw do
       resources :items,:customers,:genres
   end
 
-  namespace :public do
+  scope module: :public do
+    devise_for :customers, controllers: {
+      sessions:      'public/customers/sessions',
+      passwords:     'public/customers/passwords',
+      registrations: 'public/customers/registrations',
+    }
     resources :customers,:items
   end
 
@@ -13,11 +18,7 @@ Rails.application.routes.draw do
     passwords:     'admin/passwords',
     registrations: 'admin/registrations',
   }
-  devise_for :customers, controllers: {
-    sessions:      'public/sessions',
-    passwords:     'public/passwords',
-    registrations: 'public/registrations',
-  }
+
   get "/about" => "public/homes#about"
   root to: 'public/homes#top'
 
