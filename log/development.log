@@ -5318,3 +5318,384 @@ Processing by Public::Customers::RegistrationsController#new as HTML
 Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admin/customers" for 60.72.72.89 at 2022-01-13 11:42:05 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admin/customers/index.html.erb:13
+  Rendered admin/customers/index.html.erb within layouts/application (18.6ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 482ms (Views: 475.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 11:42:19 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (14.3ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 11:46:44 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 429ms (Views: 409.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 11:46:48 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/shared/_links.html.erb (1.0ms)
+  Rendered public/customers/sessions/new.html.erb within layouts/application (14.7ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 11:49:59 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/shared/_links.html.erb (0.8ms)
+  Rendered public/customers/sessions/new.html.erb within layouts/application (4.1ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 11:56:54 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 11:57:46 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered homes/_header.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 11:59:54 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (4.5ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 60.72.72.89 at 2022-01-13 12:01:02 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LeW2yXuEavN77cL8u/AqV0gvmvX4/yABj4vnZlq624GW8kYvyleA1yFV3Hb7snMAvpzAiPLKziGokBfVUHm0Xw==", "customer"=>{"last_name"=>"有", "first_name"=>"有", "last_name_kana"=>"ア", "first_name_kana"=>"ア", "email"=>"aa@aa", "postal_code"=>"11111111", "address"=>"aaaaaaaa", "telephone_number"=>"11111111111", "encrypted_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :address, :telephone_number, :encrypted_password
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (1.0ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (4.1ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 76.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 12:01:20 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered homes/_header.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 12:01:27 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (0.4ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (4.8ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 60.72.72.89 at 2022-01-13 12:03:13 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ngP1/VV+8IrNJJBZ1R0CkLBDBhBVKe1WDLMUB1vyDdUlFAUb5K0arpecjtOVX1vHRvBcbV8cA3YrqOS0UTFiCw==", "customer"=>{"last_name"=>"有", "first_name"=>"有", "last_name_kana"=>"ア", "first_name_kana"=>"ア", "email"=>"ss@ss", "postal_code"=>"12341234", "address"=>"12341234", "telephone_number"=>"12341234", "encrypted_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :address, :telephone_number, :encrypted_password
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ss@ss"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (0.9ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (3.9ms)
+  Rendered homes/_header.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 72.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 12:03:30 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (2.1ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (6.1ms)
+  Rendered homes/_header.html.erb (1.0ms)
+Completed 200 OK in 122ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 12:42:40 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (0.4ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (12.1ms)
+  Rendered homes/_header.html.erb (1.1ms)
+Completed 200 OK in 4952ms (Views: 4931.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/sign_up" for 60.72.72.89 at 2022-01-13 12:42:47 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#new as HTML
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (2.1ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (7.2ms)
+  Rendered homes/_header.html.erb (0.7ms)
+Completed 200 OK in 136ms (Views: 133.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 60.72.72.89 at 2022-01-13 12:44:42 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tr3hKccS0IyMjeoDaIyu6LB4rkoagbQ5WOfkyKMlucHBFlBOPcSZqjq//udw5CY0+6TMXiwLqrq7l+DHeSktNQ==", "customer"=>{"last_name"=>"木", "first_name"=>"木", "last_name_kana"=>"キ", "first_name_kana"=>"キ", "email"=>"kk@kk", "postal_code"=>"1231234", "address"=>"kikikikiki", "telephone_number"=>"121231234", "encrypted_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :address, :telephone_number, :encrypted_password
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "kk@kk"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering public/customers/registrations/new.html.erb within layouts/application
+  Rendered public/customers/shared/_error_messages.html.erb (1.0ms)
+  Rendered public/customers/registrations/new.html.erb within layouts/application (4.0ms)
+  Rendered homes/_header.html.erb (0.6ms)
+Completed 200 OK in 125ms (Views: 100.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 12:44:57 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered homes/_header.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.72.72.89 at 2022-01-13 12:45:06 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uZnsPeH79r+vKR3+zzOxI0j1fQ6vI55wKgFy6pTfRii+Qrd1iY7FIVpna8RbXw1SIlgjeW9BZTszWp2kNMTAjA==", "customer"=>{"email"=>"aa@aa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms)
+
+
+Processing by Public::Customers::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uZnsPeH79r+vKR3+zzOxI0j1fQ6vI55wKgFy6pTfRii+Qrd1iY7FIVpna8RbXw1SIlgjeW9BZTszWp2kNMTAjA==", "customer"=>{"email"=>"aa@aa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered homes/_header.html.erb (0.6ms)
+Completed 200 OK in 417ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.72.72.89 at 2022-01-13 12:45:14 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/bXjhq+2Q5F9hHZeif7SdYlz5cMHeM2YR6UwihGu8vFyHlLhVWAKt8u2YrqRllqpwq+H1zHy0xuk1TSFy6JmBQ==", "customer"=>{"email"=>"aa@aa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "aa@aa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.1ms)
+
+
+Processing by Public::Customers::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/bXjhq+2Q5F9hHZeif7SdYlz5cMHeM2YR6UwihGu8vFyHlLhVWAKt8u2YrqRllqpwq+H1zHy0xuk1TSFy6JmBQ==", "customer"=>{"email"=>"aa@aa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering public/customers/sessions/new.html.erb within layouts/application
+  Rendered public/customers/sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered homes/_header.html.erb (0.6ms)
+Completed 200 OK in 388ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 60.72.72.89 at 2022-01-13 12:45:50 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DT8uj0WDSUFc97VwFGpxvoU7ZWq0xeXalmC68WIGJAuClJ/ov1UAZ+rFoZQMAvlizucHfoJP+1l1EL7+uAqw/w==", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "b@b"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://8cf34a6ac7774ea3a6ca6fc957434a4b.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 322ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 60.72.72.89 at 2022-01-13 12:45:51 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (2.1ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homes/_header.html.erb:1
+  Rendered homes/_header.html.erb (4.0ms)
+Completed 200 OK in 105ms (Views: 99.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.72.72.89 at 2022-01-13 12:49:56 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (3.0ms)
+  Rendered homes/_header.html.erb (3.3ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:9: unknown regexp option - l
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:10: syntax error, unexpected '<'
+        <li>カート</li>
+        ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:11: unknown regexp option - l
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:12: syntax error, unexpected '<'
+      </ul>
+      ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:13: unknown regexp options - dv
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:14: syntax error, unexpected '<'
+  </header>
+  ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:18: unknown regexp option - h
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:18: unmatched close parenthesis: /header>
+  <% else );@output_buffer.safe_append='
+  <header class="header">
+    <div class="header_logo">
+      <h1>\u306A\u304C\u306ECAKE</
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:18: syntax error, unexpected tINTEGER, expecting ')'
+      <h1>ながのCAKE</h1>
+                          ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:22: unknown regexp option - l
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:23: syntax error, unexpected '<'
+        <li>商品一覧</li>
+        ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:24: unknown regexp option - l
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:25: syntax error, unexpected '<'
+        <li>ログイン</li>
+        ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:26: unknown regexp option - l
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:27: syntax error, unexpected '<'
+    </diuv>
+    ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:28: unknown regexp options - hadr
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:33: unterminated string meets end of file
+          end
+              ^
+/home/ec2-user/environment/Nagano_cake/app/views/homes/_header.html.erb:33: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/homes/_header.html.erb:9: unknown regexp option - l
+app/views/homes/_header.html.erb:10: syntax error, unexpected '<'
+app/views/homes/_header.html.erb:11: unknown regexp option - l
+app/views/homes/_header.html.erb:12: syntax error, unexpected '<'
+app/views/homes/_header.html.erb:13: unknown regexp options - dv
+app/views/homes/_header.html.erb:14: syntax error, unexpected '<'
+app/views/homes/_header.html.erb:18: unknown regexp option - h
+app/views/homes/_header.html.erb:18: unmatched close parenthesis: /header>
+app/views/homes/_header.html.erb:18: syntax error, unexpected tINTEGER, expecting ')'
+app/views/homes/_header.html.erb:22: unknown regexp option - l
+app/views/homes/_header.html.erb:23: syntax error, unexpected '<'
+app/views/homes/_header.html.erb:24: unknown regexp option - l
+app/views/homes/_header.html.erb:25: syntax error, unexpected '<'
+app/views/homes/_header.html.erb:26: unknown regexp option - l
+app/views/homes/_header.html.erb:27: syntax error, unexpected '<'
+app/views/homes/_header.html.erb:28: unknown regexp options - hadr
+app/views/homes/_header.html.erb:33: unterminated string meets end of file
+app/views/homes/_header.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___385540924220878292_70294089543300'
+Started GET "/customers/sign_in" for 60.72.72.89 at 2022-01-13 12:50:02 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::Customers::SessionsController#new as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://8cf34a6ac7774ea3a6ca6fc957434a4b.vfs.cloud9.us-east-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 60.72.72.89 at 2022-01-13 12:50:11 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (2.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homes/_header.html.erb:1
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered homes/_header.html.erb (414.2ms)
+Completed 500 Internal Server Error in 513ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00007fdd3dc02480>:0x00007fdd40c0b488>
+Did you mean?  current_customer):
+     5:     </div>
+     6:     <diuv class="header_nav">
+     7:       <ul>
+     8:         <li><%= link_to "マイページ", customer_path(current_user.id) %></li>
+     9:         <li>商品一覧</li>
+    10:         <li>カート</li>
+    11:         <li>ログアウト</li>
+  
+app/views/homes/_header.html.erb:8:in `_app_views_homes__header_html_erb___1096252330530944395_70294100097860'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___385540924220878292_70294125449860'
+Started GET "/" for 60.72.72.89 at 2022-01-13 12:51:18 +0000
+Cannot render console from 60.72.72.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (2.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homes/_header.html.erb:1
+  Rendered homes/_header.html.erb (5.9ms)
+Completed 200 OK in 138ms (Views: 136.0ms | ActiveRecord: 0.1ms)
+
+

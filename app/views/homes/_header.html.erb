@@ -1,4 +1,18 @@
-
+<% if customer_signed_in? %>
+  <header class="header">
+    <div class="header_logo">
+      <h1>ながのCAKE</h1>
+    </div>
+    <diuv class="header_nav">
+      <ul>
+        <li><%= link_to "マイページ" %></li>
+        <li>商品一覧</li>
+        <li>カート</li>
+        <li>ログアウト</li>
+      </ul>
+    </diuv>
+  </header>
+  <% else %>
   <header class="header">
     <div class="header_logo">
       <h1>ながのCAKE</h1>
@@ -12,3 +26,4 @@
       </ul>
     </diuv>
   </header>
+  <% end %>
