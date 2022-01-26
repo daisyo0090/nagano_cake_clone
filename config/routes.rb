@@ -10,7 +10,9 @@ Rails.application.routes.draw do
       passwords:     'public/customers/passwords',
       registrations: 'public/customers/registrations',
     }
-    resources :customers,:items
+    resources :items,:addresses
+    resource :customers, path: "customers/my_page"
+    get "/customers_unsubscribe" => "customers#unsubscribe"
   end
 
   devise_for :admin, controllers: {

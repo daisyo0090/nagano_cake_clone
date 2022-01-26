@@ -2,7 +2,7 @@
   <h3>マイページ</h3>
   <table>
     <tr>
-      <th>登録情報</th> <td><%= link_to "編集する", edit_customer_path %></td>
+      <th>登録情報</th> <td><%= link_to "編集する", edit_customers_path %></td>
     </tr>
     <tr>
       <% @customers.each do |customer| %>
@@ -29,7 +29,7 @@
       <% end %>
     </tr>
     <tr>
-      <th>配送先</th> <td><%= link_to "一覧を見る" %></td>
+      <th>配送先</th> <td><%= link_to "一覧を見る", addresses_path %></td>
     </tr>
     <tr>
       <th>注文履歴</th> <td><%= link_to "一覧を見る" %></td>

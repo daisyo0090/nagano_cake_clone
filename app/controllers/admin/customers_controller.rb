@@ -16,5 +16,5 @@ class Admin::CustomersController < ApplicationController
     @customer.update(customer_params)
     redirect_to admin_customer_path(:id)
   end
-
+  
 end
