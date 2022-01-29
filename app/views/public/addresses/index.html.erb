@@ -6,7 +6,7 @@
     <%= form_with model: @address,url: addresses_path, local: true do |f| %>
     <table>
       <tr>
-        <td>郵便番号(ハイフンなし)</td><td></td>
+        <td >郵便番号(ハイフンなし)</td><td></td>
         <td><%= f.text_field :postal_code %></td>
       </tr>
       <tr>
@@ -33,10 +33,10 @@
       <tr>
         <td><%= adrs.postal_code %></td>
         <td><%= adrs.address %></td>
-        <td>>%= adrs.name %></td>
+        <td><%= adrs.name %></td>
         <td>
-          <%= link_to "編集する", edit_address_path(:id) %>
-          <%= link_to "削除する" %>
+          <%= link_to "編集する", edit_address_path(adrs.id) %>
+          <%= link_to "削除する", address_path(adrs.id), method: :delete %>
         </td>
       </tr>
       <% end %>

@@ -3,7 +3,7 @@
     <h3>商品新規登録</h3>
   </div>
   <div class="item_main_new_table">
-    <%= form_with model: @item, url: new_admin_item_path, local: true do |f| %>
+    <%= form_with model: @item, url: admin_items_path, local: true do |f| %>
     <table>
       <tr>
         <th>商品画像</th>
@@ -26,7 +26,7 @@
       <tr>
         <th>ジャンル</th>
         <td>
-          <%= f.collection_select(:genre_name, @genres, :id, :genre_name)%>
+          <%= f.collection_select(:genre_id, @genres, :id, :genre_name)%>
         </td>
       </tr>
       <tr>
