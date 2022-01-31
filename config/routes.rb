@@ -10,9 +10,11 @@ Rails.application.routes.draw do
       passwords:     'public/customers/passwords',
       registrations: 'public/customers/registrations',
     }
-    resources :items,:addresses
+    delete "/cart_items/destroy_all" => "cart_items#destroy_all"
+    resources :items,:addresses,:cart_items
     resource :customers, path: "customers/my_page"
     get "/customers_unsubscribe" => "customers#unsubscribe"
+
   end
 
   devise_for :admin, controllers: {

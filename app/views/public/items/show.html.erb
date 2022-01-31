@@ -1,0 +1,16 @@
+<main class="public_items_show_main">
+  <div class="public_items_show_image">
+    <%= attachment_image_tag @item, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+  </div>
+  <div class="public_items_show_detail">
+    <%= form_with model: @cart_item, url: cart_items_path, local: true do |f| %>
+    <h3><%= @item.name %></h3>
+    <p><%= @item.introduction %></p>
+    <div class="public_items_show_amount">
+      <%= f.select :amount, (1..20).map{|i|[i,i]} %>
+    </div>
+    <%= f.submit "ボタン" %>
+    <%= f.hidden_field :item_id, value: @item.id %>
+    <% end %>
+  </div>
+</main>

@@ -1,0 +1,47 @@
+<main class="public_cartitems_index_main">
+  <div class="public_cartitems_index_main_h3">
+    <h3>ショッピングカート</h3>
+  </div>
+  <div class="public_cartitems_delete_btn">
+    <%= link_to "カート内を空にする" , cart_items_destroy_all_path ,method: :delete %>
+  </div>
+  <div class="public_cartitems_index_main_table">
+    <table>
+      <tr>
+        <th>商品名</th>
+        <th>単価(税込)</th>
+        <th>数量</th>
+        <th>小計</th>
+        <th></th>
+      </tr>
+      <% @cart_items.each do |cart_item| %>
+      <tr>
+        <td><%= cart_item.item.name %></td>
+        <td><%= cart_item.item.price %></td>
+        <%= form_with model: cart_item, url: cart_item_path(cart_item.id), local: true do |f| %>
+        <td><%= f.select :amount, (1..20).map{|i|[i,i]} %><%= f.submit "変更" %></td>
+        <% end %>
+        <td><%= cart_item.item.price * cart_item.amount %></td>
+        <td><%= link_to "削除", cart_item_path(cart_item), method: :delete %></td>
+      </tr>
+      <% end %>
+    </table>
+    <div class="public_cartitems_next_btn">
+      <%= link_to "買い物を続ける", items_path %>
+    </div>
+    <div class="public_cartitems_totle_price">
+      <table>
+        <tr>
+          <td>合計金額</td>
+          <td>
+            <% @sum=0 %>
+            <% @cart_items.each do |cart_item| %>
+            <% @sum += cart_item.item.price * cart_item.amount %>
+            <% end %>
+            <%= @sum %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>
