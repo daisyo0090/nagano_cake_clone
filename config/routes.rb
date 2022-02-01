@@ -11,9 +11,11 @@ Rails.application.routes.draw do
       registrations: 'public/customers/registrations',
     }
     delete "/cart_items/destroy_all" => "cart_items#destroy_all"
-    resources :items,:addresses,:cart_items
+    resources :items,:addresses,:cart_items,:orders
     resource :customers, path: "customers/my_page"
     get "/customers_unsubscribe" => "customers#unsubscribe"
+    get "/orders_check" => "orders#check"
+    get "/orders_thanks" => "orders#thanks"
 
   end
 
