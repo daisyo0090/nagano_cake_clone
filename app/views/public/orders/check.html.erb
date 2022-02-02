@@ -1,0 +1,22 @@
+<main class="public_check_orders_main">
+  <div class="public_check_orders_main_title">
+    <h3>注文情報確認画面</h3>
+  </div>
+    <% @cart_items.each do |cart| %>
+      <%= cart.item.name %>
+      <%= @item.price.add_tax_sales_price.to_s(:dalimited) %>
+      <%= cart.amount %>
+      <%= cart.add_tax_sales_price.to_s(:dalimited) %>
+    <% end %>
+    <p>ご請求金額</p>
+    <%= @total.to_s(:delimited) %>
+    <p>お届け先</p>
+    <%= @order.address %>
+    <%= form_with model: @order, url: orders_path, local: true do |f| %>
+      <%= f.hidden_field :name %>
+      <%= f.hidden_field :address %>
+      <%= f.hidden_field :total_price, value: @total %>
+      <%= f.submit "注文を確定する" %>
+    <% end %>
+  </div>
+</main>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :items,:addresses,:cart_items,:orders
     resource :customers, path: "customers/my_page"
     get "/customers_unsubscribe" => "customers#unsubscribe"
-    get "/orders_check" => "orders#check"
+    post "/orders_check" => "orders#check"
     get "/orders_thanks" => "orders#thanks"
 
   end

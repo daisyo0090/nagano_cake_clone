@@ -1,0 +1,28 @@
+<main class="public_orders_main">
+  <div class="public_orders_title">
+    <h3>注文履歴一覧</h3>
+  </div>
+  <div class="public_orders_table">
+    <table>
+      <tr>
+        <td>注文日</td>
+        <td>配送先</td>
+        <td>注文商品</td>
+        <td>支払い金額</td>
+        <td>注文詳細</td>
+      </tr>
+      <%= @orders.each do |order| %>
+      <tr>
+        <td><%= order.create_at %></td>
+        <td>
+          <%= order.postal_code %>
+          <%= order.addresses.address %>
+        </td>
+        <td><%= order.cart_item.items.name %></td>
+        <td><%= order.total_payment %></td>
+        <td><%= link_to "表示する", orders_path(order.id) %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</main>

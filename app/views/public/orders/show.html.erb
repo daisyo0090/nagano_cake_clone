@@ -1,0 +1,61 @@
+<main class="public_order_show">
+
+  <div class="public_order_show_title">
+    <h3>注文履歴詳細</h3>
+  </div>
+
+  <div class="public_order_info">
+    <table>
+      <tr><th>注文情報</th></tr>
+      <tr>
+        <td>注文日</td>
+        <td><%= @order.crate_at %></td>
+      </tr>
+      <tr>
+        <td>配送先</td>
+        <td><%= @order.addresses.address %></td>
+      </tr>
+      <tr>
+        <td>支払方法</td>
+        <td><%= %></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="public_order_price_info">
+    <table>
+      <tr><th>請求情報</th></tr>
+      <tr>
+        <td>商品合計</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>配送料</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>ご請求額</th>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="public_order_item_info">
+    <table>
+      <tr>
+        <td>商品</td>
+        <td>単価(税込)</td>
+        <td>個数</td>
+        <td>小計</td>
+      </tr>
+      <% @cart_items.each do |cart_item| %>
+      <tr>
+        <td><%= @cart_item.items.name %></td>
+        <td><%= @cart_item.price %></td>
+        <td><%= @cart_item.amount %></td>
+        <td><%= @cart_item.price %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</main>

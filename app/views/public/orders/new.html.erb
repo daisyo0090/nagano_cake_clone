@@ -1,0 +1,32 @@
+<main class="public_order_new_main">
+  <div class="public_orders_title">
+    <h3>注文情報入力</h3>
+  </div>
+  <div class="public_order_new_list">
+    <%= form_with model: @oeder,url: orders_check_path, local: true do |f| %>
+    <h3>支払い方法</h3>
+    <div class="public_order_new_list_checkbox">
+      <%= f.collection_radio_buttons :payment_method, Order.payment_methods_i18n, :first , :last %>
+    </div>
+    <h3>お届け先</h3>
+    <div class="public_order_new_list_checkbox">
+      <%= f.radio_button :address_number, 1 %>
+      <%= f.label :address_number_1, "ご自身の住所" %>
+      <%= current_customer.postal_code %>
+      <%= current_customer.address %>
+
+      <%= f.radio_button :address_number, 2 %>
+      <%= f.label :address_number_2, "新しいお届け先" %>
+      <%= f.label :address, "郵便番号" %>
+      <%= f.text_field :postal_code %>
+      <%= f.label :address, "住所" %>
+      <%= f.text_field :address %>
+      <%= f.label :name, "宛名" %>
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="public_order_new_check_path_btn">
+     <%= f.submit "確認画面へ進む" %>
+  </div>
+    <% end %>
+</main>
