@@ -9,7 +9,7 @@
         <%= link_to item.name, item_path(item.id) %>
       </div>
       <div class="public_items_price">
-        <%= item.price %>
+        <%= item.add_tax_price.to_s(:delimited) %>
       </div>
     <% end %>
   </div>

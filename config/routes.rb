@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
       resources :items,:customers,:genres
+      root to: 'homes#top'
   end
 
   scope module: :public do

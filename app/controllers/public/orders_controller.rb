@@ -5,57 +5,48 @@ class Public::OrdersController < ApplicationController
   end
 
   def create
-    @cart_items = current_customer.cart_items.all
+    @cart_items = current_customer.cart_items
     @order = current_customer.orders.new(order_params)
-    if @order.save
-      @cart_items.each do |cart|
-        @order_item = OrderItem.new
-        @order_item.item_id = cart.item_id
-        @order_item.order_id = @order.id
-        @order_item.order_quantity = cart.quantity
-        @order_item.order_price = cart.item.price
-        @order_item.save
-      end
-      redirect_to orders_thanks_path
-      @cart_items.destroy_all
-    else
-      @order = Order.new(order_params)
-      render :new
+    @order.save
+    @cart_items.each do |cart_item|
+      @order_detail = @order.order_details.new
+      @order_detail.item_id = cart_item.item.id
+      @order_detail.price = cart_item.item.price
+      @order_detail.amount = cart_item.amount
+      @order_detail.save
     end
+    @cart_items.destroy_all
+    redirect_to orders_thanks_path
   end
 
   def check
-    @cart_item = current_customer.cart_items.find_by(item_id: params[:cart_item][:item_id])
     @order = Order.new(order_params)
+    @order.shipping_cost = 800
+    @cart_items = current_customer.cart_items
 
     if params[:order][:address_number] == "1"
-      @order.name = current_customer.name
-      @order.address = current_customer.customer_address
-
+      @order.name = current_customer.last_name + current_customer.first_name
+      @order.address = current_customer.address
+      @order.postal_code = current_customer.postal_code
     elsif params[:order][:address_number] == "2"
       @address_new = current_customer.addresses.new(address_params)
-      if @address_new.save
-      else
-        render :new
-      end
-
+      @address_new.save
+      @order.name = current_customer.last_name + current_customer.first_name
+      @order.address = current_customer.address
+      @order.postal_code = current_customer.postal_code
     else
       redirect_to :cart_items_path
     end
-    @cart_items = current_customer.cart_items.all
-    @total = @cart_items.inject(0) { |sum, item| sum + item.sum_price }
+    @cart_items = current_customer.cart_items
   end
 
   def index
-    @orders = Order.all
+    @orders = current_customer.orders
   end
 
   def show
     @order = Order.find(params[:id])
-  end
-
-  def check
-
+    @order_details = @order.order_details
   end
 
   def thanks
@@ -65,11 +56,11 @@ class Public::OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name, :address, :total_payment, :postal_code,:shipping_cost)
+    params.require(:order).permit(:postal_code,:address,:name,:shipping_cost,:total_payment,:payment_method)
   end
 
   def address_params
-    params.require(:order).permit(:name, :address)
+    params.require(:address).permit(:name, :address)
   end
 
 

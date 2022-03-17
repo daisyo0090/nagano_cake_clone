@@ -3,7 +3,7 @@
     <h3>注文情報入力</h3>
   </div>
   <div class="public_order_new_list">
-    <%= form_with model: @oeder,url: orders_check_path, local: true do |f| %>
+    <%= form_with model: @order,url: orders_check_path, local: true do |f| %>
     <h3>支払い方法</h3>
     <div class="public_order_new_list_checkbox">
       <%= f.collection_radio_buttons :payment_method, Order.payment_methods_i18n, :first , :last %>

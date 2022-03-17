@@ -1,23 +1,18 @@
-<main class="customer_main_index">
-  <div class="customer_main_index_h3">
-    <h3>会員一覧</h3>
-  </div>
-  <div class="customer_main_index_table">
-    <table>
+<main class="admin_genres_main">
+  <div class="admin_genre_new">
+    <h3 class="admin_genre_new_title">ジャンル一覧・追加</h3>
+    <table class="admin_genre_new_table">
       <tr>
-        <th>会員ID</th>
-        <th>氏名</th>
-        <th>メールアドレス</th>
-        <th>ステータス</th>
+        <th>ジャンル</th>
+        <th></th>
       </tr>
-      <% @customers.each do |customer| %>
+      <% @genres.each do |genre| %>
       <tr>
-        <td><%= customer.id %></td>
-        <td><%= customer.last_name,customer.first_name %></td>
-        <td><%= customer.email %></td>
-        <td><%= customer.is_active %></td>
+        <td><%= genre.genre_name %></td>
+        <td><%= link_to "編集する", edit_admin_genre_path(genre.id) %></td>
       </tr>
       <% end %>
     </table>
   </div>
+
 </main>

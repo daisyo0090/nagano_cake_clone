@@ -1,8 +1,9 @@
 class Order < ApplicationRecord
   enum payment_method: { credit_card: 0, transfer: 1 }
   belongs_to :customer
-  
-  def  add_tax_sales_price
-  (self.sales_price * 1.10).round
+  has_many :order_details
+
+  def  add_tax_price
+    (self.price * 1.08).round
   end
 end
