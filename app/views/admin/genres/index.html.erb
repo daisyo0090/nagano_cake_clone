@@ -1,7 +1,18 @@
 <main class="admin_genres_main">
-  <div class="admin_genre_new">
+  <div class="admin_genre_index">
     <h3 class="admin_genre_new_title">ジャンル一覧・追加</h3>
+
+    <%= form_with model: @genre, url: admin_genres_path, local: true do |f|%>
     <table class="admin_genre_new_table">
+      <tr>
+        <td>ジャンル名</td>
+        <td><%= f.text_field :genre_name %></td>
+        <td><%= f.submit "新規登録" %></td>
+      </tr>
+    </table>
+    <% end %>
+
+    <table class="admin_genre_index_table">
       <tr>
         <th>ジャンル</th>
         <th></th>

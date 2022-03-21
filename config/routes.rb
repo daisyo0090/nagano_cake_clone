@@ -14,9 +14,9 @@ Rails.application.routes.draw do
     delete "/cart_items/destroy_all" => "cart_items#destroy_all"
     resources :items,:addresses,:cart_items,:orders
     resource :customers, path: "customers/my_page"
-    get "/customers_unsubscribe" => "customers#unsubscribe"
-    post "/orders_check" => "orders#check"
-    get "/orders_thanks" => "orders#thanks"
+    get "/customers/unsubscribe" => "customers#unsubscribe"
+    post "/orders/check" => "orders#check"
+    get "/orders/thanks" => "orders#thanks"
 
   end
 
