@@ -20,11 +20,17 @@
         </tr>
         <tr>
           <th>税抜価格</br>（税込価格）</th>
-          <td><%= @item.price %></td>
+          <td><%= @item.price %>円</td>
         </tr>
         <tr>
           <th>販売ステータス</th>
-          <td><%= @item.is_active %></td>
+          <td>
+            <% if @item.is_active = true %>
+              <%= "販売中" %>
+            <% else %>
+              <%= "販売停止中" %>
+            <% end %>
+          </td>
         </tr>
       </table>
     </div>

@@ -3,6 +3,7 @@
     <h3><%= @customer.last_name+@customer.first_name %>さんの会員情報編集</h3>
   </div>
   <div class="customer_main_show_table">
+    <%= form_with model: @customer,url: admin_customer_path, local: true do |f| %>
     <table>
       <tr>
         <th>会員ID</th>
@@ -10,7 +11,7 @@
       </tr>
       <tr>
         <th>氏名</th>
-        <%= form_with model: @customer,url: admin_customer_path, local: true do |f| %>
+
         <td><%= f.text_field :last_name %></td>
         <td><%= f.text_field :first_name %></td>
       </tr>

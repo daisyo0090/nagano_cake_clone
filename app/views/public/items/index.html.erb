@@ -3,7 +3,7 @@
   <div class="public_items_list">
     <% @items.each do |item| %>
       <div class="public_items_list_image">
-        <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+        <%= link_to attachment_image_tag(item, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg"),item_path(item.id) %>
       </div>
       <div class="public_items_name">
         <%= link_to item.name, item_path(item.id) %>

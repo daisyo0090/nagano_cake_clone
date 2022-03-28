@@ -2,8 +2,8 @@
   <div class="public_orders_title">
     <h3>注文情報入力</h3>
   </div>
+  <%= form_with model: @order,url: orders_check_path, local: true do |f| %>
   <div class="public_order_new_list">
-    <%= form_with model: @order,url: orders_check_path, local: true do |f| %>
     <h3>支払い方法</h3>
     <div class="public_order_new_list_checkbox">
       <%= f.collection_radio_buttons :payment_method, Order.payment_methods_i18n, :first , :last %>
@@ -28,5 +28,5 @@
   <div class="public_order_new_check_path_btn">
      <%= f.submit "確認画面へ進む" %>
   </div>
-    <% end %>
+  <% end %>
 </main>

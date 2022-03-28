@@ -1,6 +1,6 @@
 <main class="customer_main_show">
   <div class="customer_main_show_h3">
-    <h3><%= @customer.last_name+@customer.first_name %></h3>
+    <h3><%= @customer.last_name+@customer.first_name %>さんの会員詳細</h3>
   </div>
   <div class="customer_main_show_table">
     <table>
@@ -34,7 +34,14 @@
       </tr>
       <tr>
         <th>会員ステータス</th>
-        <td><%= @customer.is_active %></td>
+        <td>
+          <% if @customer.is_active == true %>
+          有効
+          <% elsif @customer.is_active == false %>
+          退会
+          <% else %>
+          <% end %>
+        </td>
       </tr>
     </table>
     <div class="customer_main_show_btn">

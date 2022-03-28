@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   end
 
   scope module: :public do
+    get "/orders/thanks" => "orders#thanks"
+    post "/customers/seeyou" => "customers#seeyou"
     devise_for :customers, controllers: {
       sessions:      'public/customers/sessions',
       passwords:     'public/customers/passwords',
@@ -16,7 +18,6 @@ Rails.application.routes.draw do
     resource :customers, path: "customers/my_page"
     get "/customers/unsubscribe" => "customers#unsubscribe"
     post "/orders/check" => "orders#check"
-    get "/orders/thanks" => "orders#thanks"
 
   end
 

@@ -22,7 +22,7 @@
         <td><%= f.select :amount, (1..20).map{|i|[i,i]} %><%= f.submit "変更" %></td>
 
         <% end %>
-        <td><%= cart_item.item.price * cart_item.amount %></td>
+        <td><%= cart_item.item.add_tax_price * cart_item.amount %></td>
         <td><%= link_to "削除", cart_item_path(cart_item), method: :delete %></td>
       </tr>
       <% end %>
@@ -45,7 +45,10 @@
         </tr>
       </table>
       <div class="public_cartitems_order_btn">
+        <% if @cart_items.present? %>
           <%= link_to "情報入力へ進む", new_order_path %>
+        <% else %>
+        <% end %>
       </div>
     </div>
 
